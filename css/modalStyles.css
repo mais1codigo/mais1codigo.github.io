@@ -1,0 +1,137 @@
+/* Estilos para o modal */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Container do modal */
+.modal-container {
+  background-color: #fff;
+  background-image: url("../img/modal.jpg");
+  background-size: cover;
+  margin: 10% auto;
+  padding: 4rem 8rem;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  max-height: 600px;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  box-shadow: 2px 2px 5cap rgba(0, 0, 0, 0.4);
+}
+
+.modal-container h2 {
+  color: #FFF;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.modal-container p {
+  color: #FFF;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Formulário */
+#signupForm {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#signupForm label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: #FFF;
+  text-align: left;
+}
+
+#signupForm input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #8e8e8e;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#signupForm input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.close {
+  color: #f61414;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.btn-modal {
+  margin-top: 1rem;
+}
+
+
+
+
+
+/* Tablets */
+@media (max-width: 768px) {
+  .modal-container {
+    width: 90%;
+    padding: 2rem 3rem;
+    margin: 15% auto;
+  }
+
+  .modal-container h2 {
+    font-size: 2rem;
+  }
+
+  .modal-container p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .modal-container {
+    width: 95%;
+    padding: 1.5rem 1.5rem;
+    margin: 20% auto;
+  }
+
+  .modal-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-container p {
+    font-size: 0.85rem;
+  }
+
+  #signupForm {
+    max-width: 100%;
+  }
+
+  #signupForm label {
+    font-size: 0.8rem;
+  }
+
+  #signupForm input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,256 @@
+#perfil {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.d1 {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2cdb15;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 100px auto 0 auto;
+  padding: 0 20px;
+  gap: 2rem;
+}
+
+/* --- Alterações Principais Começam Aqui --- */
+
+.profile,
+.github,
+.portifolio {
+  flex: 1 1 300px; /* Permite que os cards cresçam e encolham a partir de uma base de 300px */
+  max-width: 380px; /* Define uma largura máxima para não ficarem muito grandes em telas largas */
+  background-color: #161b22;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex; /* Adicionado para melhor alinhamento interno */
+  flex-direction: column; /* Adicionado para melhor alinhamento interno */
+}
+
+.github {
+  background-color: #ffffff;
+  color: black;
+}
+
+.portifolio {
+  background-color: #efefef;
+  color: black;
+}
+
+/* --- Fim das Alterações Principais --- */
+
+
+div {
+  text-align: center;
+}
+
+.bio {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+.contact {
+  list-style: none;
+  padding: 0;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+.content {
+  flex: 1;
+}
+
+.banner {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.experience {
+  list-style: none;
+  padding: 0;
+  line-height: 1.6;
+}
+
+@keyframes balancar {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.dancar {
+  animation: balancar 0.5s ease;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    -45deg,
+    #ff0000, #ff4000, #ff8000, #ffbf00, #ffff00, #bfff00, #80ff00, #40ff00, #00ff00, #00ff40,
+    #00ff80, #00ffbf, #00ffff, #00bfff, #0080ff, #0040ff, #0000ff, #4000ff, #8000ff, #bf00ff,
+    #ff00ff, #ff00bf, #ff0080, #ff0040, #ff0000, #ff4000, #ff8000, #ffbf00, #ffff00, #bfff00,
+    #80ff00, #40ff00, #00ff00, #00ff40, #00ff80, #00ffbf, #00ffff, #00bfff, #0080ff, #0040ff,
+    #0000ff, #4000ff, #8000ff, #bf00ff, #ff00ff, #ff00bf, #ff0080, #ff0040, #ff0000, #ff4000
+  );
+  background-size: 500% 500%;
+  animation: fundoAnimado 15s infinite linear;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes fundoAnimado {
+  0% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: hue-rotate(360deg);
+  }
+}
+
+.portfolio-icon {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.portifolio .portfolio-link {
+    margin-top: auto; /* Empurra o botão para o final do card */
+}
+
+.portfolio-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0d6efd;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.portfolio-link:hover {
+  background-color: #0b5ed7;
+  color: white;
+}
+
+
+/* Telas médias (até 992px) */
+@media (max-width: 992px) {
+  .container {
+    margin: 60px auto 0 auto; /* Menor margem no topo */
+    gap: 1.5rem;
+  }
+
+  .profile,
+  .github,
+  .portifolio {
+    max-width: 320px;
+  }
+
+  #perfil {
+    height: 90px;
+    width: 90px;
+  }
+}
+
+/* Telas pequenas (até 600px → celulares) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: stretch; /* Cards ocupam 100% */
+    margin-top: 40px;
+    gap: 1rem;
+  }
+
+  .profile,
+  .github,
+  .portifolio {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .portfolio-icon {
+    width: 45px;
+  }
+
+  .portfolio-link {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  #perfil {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+/* Telas muito pequenas (até 400px → smartphones compactos) */
+@media (max-width: 400px) {
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .bio {
+    font-size: 0.8rem;
+  }
+
+  .contact {
+    font-size: 0.75rem;
+  }
+
+  .portfolio-link {
+    width: 100%;
+    display: block;
+  }
+}
