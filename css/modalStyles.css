@@ -1,12 +1,15 @@
 /* Estilos para o modal */
 .modal {
-  display: block;
+  display: flex;            /* Flex para centralizar */
+  align-items: center;      /* Centraliza verticalmente */
+  justify-content: center;  /* Centraliza horizontalmente */
   position: fixed;
   z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  overflow: auto; 
 }
 
 /* Container do modal */
@@ -135,3 +138,4 @@
     padding: 8px;
   }
 }
+
