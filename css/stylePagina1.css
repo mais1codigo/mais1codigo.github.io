@@ -200,7 +200,7 @@ body::before {
 }
 
 /* Telas pequenas (até 600px → celulares) */
-@media (max-width: 600px) {
+@media (max-width: 450px) {
   body {
     font-size: 14px;
   }
@@ -254,3 +254,4 @@ body::before {
     display: block;
   }
 }
+
