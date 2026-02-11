@@ -35,13 +35,14 @@ Mesmo ainda construindo cases práticos mais robustos, este projeto representa m
 - CSS3
 - Git
 - GitHub
+- Java Script
 
 ---
 
 ## 📚 Formação e Estudos
 
 - Estudante de Desenvolvimento Full Stack
-- Formação anterior em Administração (até o 5º semestre)
+- Formação anterior em Administração 
 - Aprendizado contínuo em lógica de programação e desenvolvimento web
 
 ---
@@ -79,8 +80,8 @@ Essas experiências contribuíram para o desenvolvimento de:
 ## 📬 Contato
 
 📍 Itabira - MG, Brasil  
-📧 seuemail@email.com  
-🔗 LinkedIn: https://linkedin.com/in/seuusuario  
+📧 joao.gomes@pditabira.com.br  
+🔗 LinkedIn: https://www.linkedin.com/in/jo%C3%A3o-victor-gomes-6b5b50205/  
 
 ---
 
